@@ -3,11 +3,10 @@ racket-predicates
 
 A general purpose library composed of predicates functions in Racket Programming Language (Lisp Dialect)
 
-###### How to Import libraries 
-
 ###### Import Package
 ```properties
 Import in DrRacket IDE:
+- Clone the project in the local using `git clone <repo name>`  
 - DrRacket -> File -> Install Package 
 - Under Package Source paste: https://github.com/aryaghan-mutum/ralgory.git 
 - Click Install or Update
