@@ -5,3 +5,4 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 (require rackunit)
+(require "../predicates/string/string-predicates.rkt")

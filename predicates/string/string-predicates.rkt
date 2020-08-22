@@ -4,6 +4,9 @@
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
+(provide vowel? 
+         consonent?)
+         
 ;; check if a given letter is a vowel
 (define (vowel? letter)
   (let ((vlst '("a" "e" "i" "o" "u")))
