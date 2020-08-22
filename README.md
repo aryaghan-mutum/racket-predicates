@@ -1,3 +1,6 @@
 racket-predicates
 =================
-README text here.
+
+A General purpose library composed of predicates functions in Racket Programming Language (Lisp Dialect)
+
+
