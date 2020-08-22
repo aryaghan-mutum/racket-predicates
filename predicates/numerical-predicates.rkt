@@ -8,7 +8,7 @@
          1?
          pos?
          neg?
-         less-than 
+         less-than? 
          sum-lesser? 
          sum-greater?
          even?
@@ -27,7 +27,7 @@
 (define (neg? n) (< n 0))
 
 ;; check if the first number is less than the second
-(define (less-than x y) (< x y))
+(define (less-than? x y) (< x y))
 
 ;; check if the sum of first two numbers is lesser than the third  
 (define (sum-lesser? x y z) (< (+ x y) z))
