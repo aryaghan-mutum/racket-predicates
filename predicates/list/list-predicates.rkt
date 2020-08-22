@@ -37,11 +37,11 @@
           ((eq? n (car lst)) #t)
           (else (member? n (cdr lst)))))
 
-;; check a list of even boolean expression 
+;; check each and every element in a list of even boolean expression
 (define (even-all? lst)
   (map even? lst))
 
-;; get a list of odd boolean expression
+;; check each and every element in a list of odd boolean expression
 (define (odd-all? lst) 
   (map odd? lst))
 
