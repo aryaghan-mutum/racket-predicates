@@ -5,5 +5,5 @@
 (define scribblings '(("scribblings/racket-predicates.scrbl" ())))
 (define pkg-desc "Description Here")
 (define version "0.0")
-(define pkg-authors '(anuragmuthyam))
+(define pkg-authors '(AnuragMuthyam))
 

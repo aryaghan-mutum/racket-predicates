@@ -5,7 +5,7 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 (require rackunit)
-(require "../predicates/logic/logical-predicates.rkt")
+(require "../predicates/logic/logic-predicates.rkt")
 
 ;; true?
 (check-eqv? (true? #f) #f)

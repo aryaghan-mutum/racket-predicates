@@ -19,4 +19,4 @@
 
 ;; check if a given letter is a consonent
 (define (consonent? letter)
-  (not (vowel?? letter)))
+  (not (vowel? letter)))
