@@ -6,6 +6,7 @@
 
 (require rackunit)
 (require "../predicates/numer/numerical-predicates.rkt")
+(require "../predicates/numer/prime.rkt")
 
 ;; 0?
 (check-eqv? (0? -1) #f)
@@ -70,5 +71,13 @@
 (check-eqv? (square? 25) #t)
 (check-eqv? (square? 25.0) #t)
 (check-eqv? (square? 1/25) #f)
+
+;; prime?
+(check-eqv? (prime? 2) #t)
+(check-eqv? (prime? 3) #t)
+(check-eqv? (prime? 4) #f)
+(check-eqv? (prime? 5) #t)
+(check-eqv? (prime? 6) #f)
+
 
 

@@ -4,15 +4,26 @@
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
+(require rackunit)
+(require "../predicates/logic/logical-predicates.rkt")
 
-(false? #f)        ;#t
-(false? #t)        ;#f
-(false? null)      ;#f
-(false? (not null));#t
+;; true?
+(check-eqv? (true? #f) #f)
+(check-eqv? (true? #t) #t)
+(check-eqv? (true? null) #f)
+(check-eqv? (true? (not null)) #f)
+(check-eqv? (false? -1) #f)
 
-;; boolean
-(boolean? #t)      ;#t
-(boolean? #f)      ;#t
-(boolean? null)    ;#f
-(boolean? 'false)  ;#f
+;; false?
+(check-eqv? (false? #f) #t)
+(check-eqv? (false? #t) #f)
+(check-eqv? (false? null) #f)
+(check-eqv? (false? (not null)) #t)
+(check-eqv? (false? -1) #f)
+
+;; boolean?
+(check-eqv? (boolean? #t) #t)
+(check-eqv? (boolean? #f) #t)
+(check-eqv? (boolean? null) #f)
+(check-eqv? (boolean? 'false) #f)
 

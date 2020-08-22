@@ -7,6 +7,7 @@
 (provide prime?)
 
 ;; check if a number is prime
+;; note: when you put (prime? 0) and (prime? 1) it doesn't work
 (define (prime? n)
   (define (try-it a)
     (= (expmod a n n) a))

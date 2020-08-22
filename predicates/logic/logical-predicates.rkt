@@ -4,6 +4,10 @@
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
+(provide true? 
+         false? 
+         boolean?)
+         
 ;; check if x is true 
 (define (true? x) (eq? x #t))
 
