@@ -4,7 +4,3 @@
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
-(equal-lst? '(1 2 3) '(1 2 3))      ;#t
-(equal-lst? '(1 2 3) '(1 3 2))      ;#f
-(equal-lst? '(a b c) '(a b c))      ;#t
-

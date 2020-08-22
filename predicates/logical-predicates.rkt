@@ -4,7 +4,13 @@
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
+;; check if x is true 
+(define (true? x) (eq? x #t))
 
-;; get a list of even boolean expression using map
-(define (even-lst-map lst)
-  (map even? lst))
+;; check if x is false 
+(define (false? x) (eq? x #f))
+
+;; check if x is a boolean expression 
+(define (boolean? x)
+  (or (eq? x #t) (eq? x #f)))
+

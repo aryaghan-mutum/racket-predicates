@@ -12,7 +12,8 @@
          sum-lesser? 
          sum-greater?
          even?
-         odd?)
+         odd?
+         square?)
 
 ;; check if a number is 0  
 (define (0? n) (= n 0))
@@ -40,3 +41,6 @@
 
 ;; checks if a number is odd
 (define (odd? n) (not (= (remainder n 2) 0)))
+
+;; check if a number is square 
+(define (square? n) (integer? (sqrt n)))
