@@ -57,15 +57,6 @@
      ((= (car lst) 1) #f)
      (else (zero-lst? (cdr lst)))))
 
-;; version 2
-; (define (member? x lst)
-;     (if (empty? lst)
-;         #f
-;         (if (eq? x (car lst))
-;             #t
-;             (member? x
-;                      (cdr lst)))))
-
 ;; check each and every element in a list of even boolean expression
 (define (even-all? lst)
   (map even? lst))
