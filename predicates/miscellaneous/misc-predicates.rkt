@@ -5,7 +5,11 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 ;; Is a give year leap year?
-(provide leap?)
+(provide leap?
+         expression? )
+
+(define (expression? x)
+  (or (number? x) (symbol? x) (pair? x)))
 
 (define (leap? year)
   (and (zero? (modulo year 4))

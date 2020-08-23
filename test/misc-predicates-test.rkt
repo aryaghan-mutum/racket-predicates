@@ -5,7 +5,7 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 (require rackunit)
-(require "../predicates/miscellaneous/leap.rkt")
+(require "../predicates/miscellaneous/misc-predicates.rkt")
 
 (check-eqv? (leap? 0) #t)
 (check-eqv? (leap? 1804) #t)
