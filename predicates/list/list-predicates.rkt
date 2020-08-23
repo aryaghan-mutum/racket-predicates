@@ -9,6 +9,8 @@
          pair?
          list?
          member?
+         positive-lst?
+         negative-lst?
          even-all?
          odd-all?)
 
@@ -36,6 +38,25 @@
     (cond ((empty? lst) #f)
           ((eq? n (car lst)) #t)
           (else (member? n (cdr lst)))))
+
+;; checks if an element in a list is positive
+(define (positive-lst? lst)
+  (cond ((empty? lst) #t)
+        ((< (car lst) 0) #f)
+        (else (positive-lst? (cdr lst)))))
+
+;; checks if an element in a list is negative
+(define (negative-lst? lst)
+  (not (positive-lst? lst)))
+
+;; version 2
+; (define (member? x lst)
+;     (if (empty? lst)
+;         #f
+;         (if (eq? x (car lst))
+;             #t
+;             (member? x
+;                      (cdr lst)))))
 
 ;; check each and every element in a list of even boolean expression
 (define (even-all? lst)

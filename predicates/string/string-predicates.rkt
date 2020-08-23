@@ -20,3 +20,11 @@
 ;; check if a given letter is a consonent
 (define (consonent? letter)
   (not (vowel? letter)))
+
+; (define (vowel??? letter)
+;   (cond ((string=?  letter "a") #t)
+;         ((string=?  letter "e") #t)
+;         ((string=?  letter "i") #t)
+;         ((string=?  letter "o") #t)
+;         ((string=?  letter "u") #t)
+;         (else #f)))
