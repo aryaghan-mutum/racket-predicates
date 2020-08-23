@@ -19,7 +19,9 @@
 
 ;; check if a given letter is a consonent
 (define (consonent? letter)
-  (not (vowel? letter)))
+  (if (or (integer? letter) (boolean? letter) (symbol? letter))
+      #f
+      (not (vowel? letter))))
 
 ; (define (vowel??? letter)
 ;   (cond ((string=?  letter "a") #t)
@@ -28,3 +30,8 @@
 ;         ((string=?  letter "o") #t)
 ;         ((string=?  letter "u") #t)
 ;         (else #f)))
+
+;; check if a given letter is a consonent
+;; There is a problem with with function. (consonent? 0) returns #t
+; (define (consonent? letter)
+;   (not (vowel? letter))))

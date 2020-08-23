@@ -6,8 +6,9 @@
 
 ;; Is a give year leap year?
 (provide leap?
-         expression? )
+         expression?)
 
+;; FIX ME. What if the x is string or list or boolean?
 (define (expression? x)
   (or (number? x) (symbol? x) (pair? x)))
 
