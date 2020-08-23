@@ -7,6 +7,12 @@
 (require rackunit)
 (require "../list/list-predicates.rkt")
 
+(check-eqv? (zero-lst? '()) #t)
+(check-eqv? (zero-lst? (list 1 1 1 0 0 1)) #f)
+(check-eqv? (zero-lst? (list 1 1 0 1 1 0)) #f)
+(check-eqv? (zero-lst? (list 0 0 0 0 0 0)) #t)
+
+
 
 (nil? '())      ;#t
 (nil? empty)    ;#t

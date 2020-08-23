@@ -12,7 +12,8 @@
          positive-lst?
          negative-lst?
          even-all?
-         odd-all?)
+         odd-all?
+         zero-lst?)
 
 ;; check if a list is null and a string is empty
 (define (empty? x)
@@ -48,6 +49,13 @@
 ;; checks if an element in a list is negative
 (define (negative-lst? lst)
   (not (positive-lst? lst)))
+
+;; check if all the elements in a list are zero
+(define (zero-lst? lst)
+  (cond
+     ((empty? lst) #t)
+     ((= (car lst) 1) #f)
+     (else (zero-lst? (cdr lst)))))
 
 ;; version 2
 ; (define (member? x lst)
