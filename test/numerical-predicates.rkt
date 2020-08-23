@@ -37,16 +37,7 @@
 (check-eqv? (neg? pi) #f)
 
 ;; less-than? 
-(check-eqv? (less-than? -1 2) #t)
-(check-eqv? (less-than? 2 3) #t)
-(check-eqv? (less-than? -3 -2) #t)
-(check-eqv? (less-than? -2 -2) #f)
-(check-eqv? (less-than? 0 0) #f)
-(check-eqv? (less-than? -3.14 3.14) #t)
-(check-eqv? (less-than? -3.14 -2.14) #t)
-(check-eqv? (less-than? -2.14 -3.14) #f)
-(check-eqv? (less-than? 2.14 3.14) #t)
-(check-eqv? (less-than? 3.14 2.14) #f)
+(check-eqv? (sum-lesser? -1 2) #t)
 
 ;; even?
 (check-eqv? (even? -3) #f)
@@ -79,5 +70,24 @@
 (check-eqv? (prime? 5) #t)
 (check-eqv? (prime? 6) #f)
 
+;; sum-lesser?
+(check-eqv? (sum-lesser? 2 3 5) #f)
+(check-eqv? (sum-lesser? 3 2 5) #f)
+(check-eqv? (sum-lesser? 2 3 4) #f)
+(check-eqv? (sum-lesser? 1 3 5) #t)
+(check-eqv? (sum-lesser? 0 0 0) #f)
 
+;; sum-lesser?
+(check-eqv? (sum-greater? 2 3 5) #f)
+(check-eqv? (sum-greater? 3 2 5) #f)
+(check-eqv? (sum-greater? 2 3 4) #t)
+(check-eqv? (sum-greater? 1 3 5) #f)
+(check-eqv? (sum-greater? 0 0 0) #f)
+
+;; sum-lesser?
+(check-eqv? (sum-equal? 2 3 5) #t)
+(check-eqv? (sum-equal? 3 2 5) #t)
+(check-eqv? (sum-equal? 2 3 4) #f)
+(check-eqv? (sum-equal? 1 3 5) #f)
+(check-eqv? (sum-equal? 0 0 0) #t)
 
