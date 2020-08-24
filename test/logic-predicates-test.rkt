@@ -12,7 +12,7 @@
 (check-eqv? (true? #t) #t)
 (check-eqv? (true? null) #f)
 (check-eqv? (true? (not null)) #f)
-(check-eqv? (false? -1) #f)
+(check-eqv? (true? -1) #f)
 
 ;; false?
 (check-eqv? (false? #f) #t)
