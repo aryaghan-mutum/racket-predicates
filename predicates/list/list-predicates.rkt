@@ -52,10 +52,9 @@
 
 ;; check if all the elements in a list are zero
 (define (zero-lst? lst)
-  (cond
-     ((empty? lst) #t)
-     ((= (car lst) 1) #f)
-     (else (zero-lst? (cdr lst)))))
+  (cond ((empty? lst) #t)
+        ((= (car lst) 1) #f)
+        (else (zero-lst? (cdr lst)))))      
 
 ;; check each and every element in a list of even boolean expression
 (define (even-all? lst)
