@@ -5,8 +5,8 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 (require rackunit)
-(require "../predicates/numer/numerical-predicates.rkt")
-(require "../predicates/numer/prime.rkt")
+(require "../predicates/numer/prime.rkt"
+         "../predicates/numer/numerical-predicates.rkt")
 
 ;; 0?
 (check-eqv? (0? -1) #f)
