@@ -11,7 +11,7 @@ A library composed of predicates functions in Racket Programming Language (Lisp 
 Import in DrRacket IDE:
 - Clone the project in the local using `git clone <repo name>`  
 - DrRacket -> File -> Install Package 
-- Under Package Source paste: https://github.com/aryaghan-mutum/ralgory.git 
+- Under Package Source paste: `https://github.com/aryaghan-mutum/racket-predicates`
 - Click Install or Update
 - Open a file and import the package: (require racket-predicates)
 ```
