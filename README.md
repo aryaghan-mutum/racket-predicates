@@ -13,7 +13,7 @@ Import in DrRacket IDE:
 - DrRacket -> File -> Install Package 
 - Under Package Source paste: https://github.com/aryaghan-mutum/ralgory.git 
 - Click Install or Update
-- Open a file and import the package: (require ralgory/main)
+- Open a file and import the package: (require racket-predicates)
 ```
 
 ###### Contributors

@@ -13,7 +13,8 @@
          sum-equal?
          even?
          odd?
-         square?)
+         square?
+         pythagous?)
 
 ;; check if a number is 0  
 (define (0? n) (= n 0))
@@ -44,3 +45,16 @@
 
 ;; check if a number is square 
 (define (square? n) (integer? (sqrt n)))
+
+;; baudhayana/pythagous-proof using lexical scoping
+(define (pythagous? x y z)
+
+  (define (area-of-outer-sqr)
+    (+ (sqr x) (* 2 x y) (sqr y)))
+  
+  (define (area-of-inner-sqr)
+    (+ (area-of-four-triangles x y) (sqr z)))
+
+  (define (area-of-four-triangles b h) (/ (* 4 b h) 2))
+
+  (= (area-of-outer-sqr) (area-of-inner-sqr)))

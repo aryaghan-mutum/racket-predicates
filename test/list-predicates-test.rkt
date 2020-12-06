@@ -5,7 +5,7 @@
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
 (require rackunit)
-(require "../list/list-predicates.rkt")
+(require "../predicates/list/list-predicates.rkt")
 
 ;; empty?
 (check-equal? (empty? '()) #t)
@@ -36,3 +36,7 @@
 (check-eqv? (member? 10 '(1 2 3)) #f)
 (check-eqv? (member? 10 '()) #f)
 (check-eqv? (member? 'e '(a b c d)) #f)
+
+;; palindrome?
+(check-eqv? (palindrome? '(m o m)) #t)
+(check-eqv? (palindrome? '(m o n e y)) #f)

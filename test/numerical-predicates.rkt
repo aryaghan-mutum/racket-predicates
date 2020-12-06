@@ -88,3 +88,7 @@
 (check-eqv? (sum-equal? 1 3 5) #f)
 (check-eqv? (sum-equal? 0 0 0) #t)
 
+;; pythagous??
+(check-eqv? (pythagous? 3 4 5) #t)
+(check-eqv? (pythagous? 1 2 3) #f)
+

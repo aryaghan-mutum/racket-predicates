@@ -13,7 +13,8 @@
          negative-lst?
          even-all?
          odd-all?
-         zero-lst?)
+         zero-lst?
+         palindrome?)
 
 ;; check if a list is null and a string is empty
 (define (empty? x)
@@ -63,4 +64,9 @@
 ;; check each and every element in a list of odd boolean expression
 (define (odd-all? lst) 
   (map odd? lst))
+
+;; check if a list is palindrome 
+(define (palindrome? lst)
+  (equal? lst (reverse lst)))
+
 
