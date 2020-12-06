@@ -14,7 +14,7 @@
          even?
          odd?
          square?
-         pythagous?)
+         pythagoras?)
 
 ;; check if a number is 0  
 (define (0? n) (= n 0))
@@ -47,7 +47,7 @@
 (define (square? n) (integer? (sqrt n)))
 
 ;; baudhayana/pythagous-proof using lexical scoping
-(define (pythagous? x y z)
+(define (pythagoras? x y z)
 
   (define (area-of-outer-sqr)
     (+ (sqr x) (* 2 x y) (sqr y)))
