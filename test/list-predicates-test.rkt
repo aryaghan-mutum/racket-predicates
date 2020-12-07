@@ -7,19 +7,20 @@
 (require rackunit)
 (require "../predicates/list/list-predicates.rkt")
 
+
 ;; empty?
-(check-equal? (empty? '()) #t)
-(check-equal? (empty? '(pi)) #f)
-(check-equal? (empty? '("string")) #f)
-(check-equal? (empty? #t) #f)
-(check-equal? (empty? #f) #f)
-(check-equal? (empty? 'symbol) #f)
+(check-true (empty? '()))
+(check-false (empty? '(pi)))
+(check-false (empty? '("string")))
+(check-false (empty? #t))
+(check-false (empty? #f))
+(check-false (empty? 'symbol))
 
 ;; zero-lst?
-(check-eqv? (zero-lst? '()) #t)
-(check-eqv? (zero-lst? (list 1 1 1 0 0 1)) #f)
-(check-eqv? (zero-lst? (list 1 1 0 1 1 0)) #f)
-(check-eqv? (zero-lst? (list 0 0 0 0 0 0)) #t)
+(check-true (zero-lst? '()))
+(check-false (zero-lst? (list 1 1 1 0 0 1)))
+(check-false (zero-lst? (list 1 1 0 1 1 0)))
+(check-true (zero-lst? (list 0 0 0 0 0 0)))
 
 ;; list?
 ; (list? '(0))                                ;#t
@@ -32,11 +33,11 @@
 ; (list? (cons 1 (cons 2 (cons 3 '()))))      ;#t
 
 ;; member?
-(check-eqv? (member? 1 '(1 2 3)) #t)
-(check-eqv? (member? 10 '(1 2 3)) #f)
-(check-eqv? (member? 10 '()) #f)
-(check-eqv? (member? 'e '(a b c d)) #f)
+(check-true (member? 1 '(1 2 3)))
+(check-false (member? 10 '(1 2 3)))
+(check-false (member? 10 '()))
+(check-false (member? 'e '(a b c d)))
 
 ;; palindrome?
-(check-eqv? (palindrome? '(m o m)) #t)
-(check-eqv? (palindrome? '(m o n e y)) #f)
+(check-true (palindrome? '(m o m)))
+(check-false (palindrome? '(m o n e y)))

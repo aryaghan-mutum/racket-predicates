@@ -8,12 +8,12 @@
 (require "../predicates/miscellaneous/misc-predicates.rkt")
 
 ;; leap?
-(check-eqv? (leap? 0) #t)
-(check-eqv? (leap? 1804) #t)
-(check-eqv? (leap? 2016) #t)
-(check-eqv? (leap? 2018) #f)
-(check-eqv? (leap? 2020) #t)
+(check-true (leap? 0))
+(check-true (leap? 1804))
+(check-true (leap? 2016))
+(check-false (leap? 2018))
+(check-true (leap? 2020))
 
 ;; expression?
-(check-eqv? (expression? 0) #t)
-(check-eqv? (expression? 'symbol) #t)
+(check-true (expression? 0))
+(check-true (expression? 'symbol))

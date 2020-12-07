@@ -8,22 +8,23 @@
 (require "../predicates/logic/logic-predicates.rkt")
 
 ;; true?
-(check-eqv? (true? #f) #f)
-(check-eqv? (true? #t) #t)
-(check-eqv? (true? null) #f)
-(check-eqv? (true? (not null)) #f)
-(check-eqv? (true? -1) #f)
+(check-false (true? #f))
+(check-true (true? #t))
+(check-false (true? null))
+(check-false (true? (not null)))
+(check-false (true? -1))
 
 ;; false?
-(check-eqv? (false? #f) #t)
-(check-eqv? (false? #t) #f)
-(check-eqv? (false? null) #f)
-(check-eqv? (false? (not null)) #t)
-(check-eqv? (false? -1) #f)
+(check-true (false? #f))
+(check-false (false? #t))
+(check-false (false? null))
+(check-true (false? (not null)))
+(check-false (false? -1))
 
 ;; boolean?
-(check-eqv? (boolean? #t) #t)
-(check-eqv? (boolean? #f) #t)
-(check-eqv? (boolean? null) #f)
-(check-eqv? (boolean? 'false) #f)
+(check-true (boolean? #t))
+(check-true (boolean? #f))
+(check-false (boolean? null))
+(check-false (boolean? 'false))
+
 
