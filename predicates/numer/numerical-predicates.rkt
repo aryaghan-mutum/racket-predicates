@@ -14,6 +14,7 @@
          even?
          odd?
          square?
+         prime?
          pythagoras?)
 
 ;; check if a number is 0  
@@ -46,15 +47,19 @@
 ;; check if a number is square 
 (define (square? n) (integer? (sqrt n)))
 
+;; check if a number is prime
+(define (prime? n)
+  (define (prime-iter n count)
+    (cond ((zero? (remainder n count)) #f)
+          ((< n (sqr count)) #t)
+          (else (prime-iter n (add1 count)))))
+ (cond ((< n 2) #f)
+       ((= n 2) #t)
+       (else (prime-iter n 2))))
+
 ;; baudhayana/pythagous-proof using lexical scoping
 (define (pythagoras? x y z)
-
-  (define (area-of-outer-sqr)
-    (+ (sqr x) (* 2 x y) (sqr y)))
-  
-  (define (area-of-inner-sqr)
-    (+ (area-of-four-triangles x y) (sqr z)))
-
+  (define (area-of-outer-sqr) (+ (sqr x) (* 2 x y) (sqr y)))
+  (define (area-of-inner-sqr) (+ (area-of-four-triangles x y) (sqr z)))
   (define (area-of-four-triangles b h) (/ (* 4 b h) 2))
-
   (= (area-of-outer-sqr) (area-of-inner-sqr)))

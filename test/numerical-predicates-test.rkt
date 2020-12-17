@@ -1,12 +1,10 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
+#lang racket
 (require rackunit)
-(require "../predicates/numer/prime.rkt"
-         "../predicates/numer/numerical-predicates.rkt")
+(require "../predicates/numer/numerical-predicates.rkt")
 
 ;; 0?
 (check-false (0? -1))
@@ -55,17 +53,23 @@
 (check-false (square? -2))
 (check-true (square? 0))
 (check-false (square? 2))
-(check-false? (square? 3))
+(check-false (square? 3))
 (check-true (square? 25))
 (check-true (square? 25.0))
 (check-false (square? 1/25))
 
 ;; prime?
+(check-false (prime? 1))
 (check-true (prime? 2))
 (check-true (prime? 3))
 (check-false (prime? 4))
 (check-true (prime? 5))
 (check-false (prime? 6))
+(check-true (prime? 7))
+(check-false (prime? 9))
+(check-true (prime? 79))
+(check-false (prime? 1337))
+(check-true (prime? 314159))
 
 ;; sum-lesser?
 (check-false (sum-lesser? 2 3 5))
