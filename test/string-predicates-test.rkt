@@ -1,11 +1,8 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
-(require rackunit)
-(require "../predicates/string/string-predicates.rkt")
+#lang racket
+(require rackunit "../predicates/string/string-predicates.rkt")
 
 ;; vowel?
 (check-false (vowel? 0))

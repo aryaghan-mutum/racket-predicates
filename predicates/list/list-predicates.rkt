@@ -1,20 +1,19 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
+#lang racket
 (provide empty? 
          atom?
          pair?
          list?
          member?
-         positive-lst?
-         negative-lst?
+         positive-list?
+         negative-list?
+         zero-lst?
          even-all?
          odd-all?
-         zero-lst?
-         palindrome?)
+         palindrome?
+         all?)
 
 ;; check if a list is null and a string is empty
 (define (empty? x)
@@ -42,20 +41,20 @@
           (else (member? n (cdr lst)))))
 
 ;; checks if an element in a list is positive
-(define (positive-lst? lst)
+(define (positive-list? lst)
   (cond ((empty? lst) #t)
         ((< (car lst) 0) #f)
-        (else (positive-lst? (cdr lst)))))
+        (else (positive-list? (cdr lst)))))
 
 ;; checks if an element in a list is negative
-(define (negative-lst? lst)
-  (not (positive-lst? lst)))
+(define (negative-list? lst)
+  (not (positive-list? lst)))
 
 ;; check if all the elements in a list are zero
-(define (zero-lst? lst)
+(define (zero-list? lst)
   (cond ((empty? lst) #t)
         ((= (car lst) 1) #f)
-        (else (zero-lst? (cdr lst)))))      
+        (else (zero-list? (cdr lst)))))      
 
 ;; check each and every element in a list of even boolean expression
 (define (even-all? lst)
@@ -69,4 +68,9 @@
 (define (palindrome? lst)
   (equal? lst (reverse lst)))
 
-
+;; - returns #t if the list is empty
+;; - returns #f if atleast one of the elems is #f for (fn (car lst)
+(define (all? fn lst)
+  (cond ((empty? lst) #t)
+        ((fn (car lst)) (all? fn (cdr lst)))
+        (else #f)))

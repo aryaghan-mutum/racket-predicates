@@ -1,10 +1,8 @@
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
 #lang racket
-(require rackunit)
-(require "../predicates/numer/numerical-predicates.rkt")
+(require rackunit "../predicates/numer/numerical-predicates.rkt")
 
 ;; 0?
 (check-false (0? -1))

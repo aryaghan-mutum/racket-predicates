@@ -1,11 +1,8 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
-(require rackunit)
-(require "../predicates/miscellaneous/misc-predicates.rkt")
+#lang racket
+(require rackunit "../predicates/miscellaneous/misc-predicates.rkt")
 
 ;; leap?
 (check-true (leap? 0))

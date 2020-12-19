@@ -1,11 +1,8 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
-(require rackunit)
-(require "../predicates/comparison/comparison-predicates.rkt")
+#lang racket
+(require rackunit  "../predicates/comparison/comparison-predicates.rkt")
 
 ;; equal-lst?
 (check-true (equal-lst? '() '()))

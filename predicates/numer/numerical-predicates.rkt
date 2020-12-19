@@ -1,9 +1,7 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
+#lang racket
 (provide 0?
          1?
          pos?

@@ -1,11 +1,8 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
-(require rackunit)
-(require "../predicates/logic/logic-predicates.rkt")
+#lang racket
+(require rackunit "../predicates/logic/logic-predicates.rkt")
 
 ;; true?
 (check-false (true? #f))
@@ -26,5 +23,3 @@
 (check-true (boolean? #f))
 (check-false (boolean? null))
 (check-false (boolean? 'false))
-
-

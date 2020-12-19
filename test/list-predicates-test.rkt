@@ -1,12 +1,9 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
 ;; https://github.com/aryaghan-mutum/racket-predicates
 
-(require rackunit)
-(require "../predicates/list/list-predicates.rkt")
-
+#lang racket
+(require rackunit "../predicates/list/list-predicates.rkt")
 
 ;; empty?
 (check-true (empty? '()))
@@ -17,10 +14,10 @@
 (check-false (empty? 'symbol))
 
 ;; zero-lst?
-(check-true (zero-lst? '()))
-(check-false (zero-lst? (list 1 1 1 0 0 1)))
-(check-false (zero-lst? (list 1 1 0 1 1 0)))
-(check-true (zero-lst? (list 0 0 0 0 0 0)))
+(check-true (zero-list? '()))
+(check-false (zero-list? (list 1 1 1 0 0 1)))
+(check-false (zero-list? (list 1 1 0 1 1 0)))
+(check-true (zero-list? (list 0 0 0 0 0 0)))
 
 ;; list?
 ; (list? '(0))                                ;#t
@@ -41,3 +38,10 @@
 ;; palindrome?
 (check-true (palindrome? '(m o m)))
 (check-false (palindrome? '(m o n e y)))
+
+;; all?
+(check-true (all? even? '()) '())
+(check-false (all? even? '(1)) '())
+(check-false (all? even? '(1 3 5 7 9)) '())
+(check-true (all? even? '(2 4 6 8 10)) '())
+(check-false (all? even? '(2 4 6 8 9 10)) '())

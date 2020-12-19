@@ -1,9 +1,7 @@
-#lang racket
-
 ;; Author: Anurag Muthyam
 ;; Email: anu.drumcoder@gmail.com
-;; https://github.com/aryaghan-mutum/racket-predicates
 
+#lang racket
 ;; Is a give year leap year?
 (provide leap?
          expression?)
