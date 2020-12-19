@@ -1,3 +1,6 @@
+;; Author: Anurag Muthyam
+;; Email: anu.drumcoder@gmail.com
+
 #lang racket
 
 (provide (all-from-out
@@ -20,7 +23,6 @@
 
 ;; numerical predicates
 (require "./predicates/numer/numerical-predicates.rkt") 
-(require "./predicates/numer/prime.rkt") 
 
 ;; string predicates
 (require "./predicates/string/string-predicates.rkt") 
