@@ -13,7 +13,8 @@
          even-all?
          odd-all?
          palindrome?
-         all?)
+         all? 
+         any?)
 
 ;; check if a list is null and a string is empty
 (define (empty? x)
@@ -74,3 +75,10 @@
   (cond ((empty? lst) #t)
         ((fn (car lst)) (all? fn (cdr lst)))
         (else #f)))
+
+;; - returns #f if the list is empty
+;; - returns #t if atleast one of the elems is #t
+(define (any? fn lst)
+  (cond ((empty? lst) #f)
+        ((fn (car lst)) #t)
+        (else (any? fn (cdr lst)))))        

@@ -45,3 +45,10 @@
 (check-false (all? even? '(1 3 5 7 9)) '())
 (check-true (all? even? '(2 4 6 8 10)) '())
 (check-false (all? even? '(2 4 6 8 9 10)) '())
+
+;; any?
+(check-false (any? even? '()))
+(check-false (any? even? '(1)))
+(check-false (any? even? '(1 3 5 7 9)))
+(check-true (any? even? '(2 4 6 8 10)))
+(check-true (any? even? '(2 4 6 8 9 10)))   
